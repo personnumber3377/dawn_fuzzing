@@ -1,0 +1,54 @@
+   5:     0x7f3d82290b4a - core[2b5b3e9ff4faf620]::fmt::write
+   6:     0x7f3d822804f6 - std[293b22bff60fef0f]::io::default_write_fmt::<std[293b22bff60fef0f]::sys::stdio::unix::Stderr>
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/io/mod.rs:639:11
+   7:     0x7f3d822804f6 - <std[293b22bff60fef0f]::sys::stdio::unix::Stderr as std[293b22bff60fef0f]::io::Write>::write_fmt
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/io/mod.rs:1994:13
+   8:     0x7f3d82268fef - <std[293b22bff60fef0f]::sys::backtrace::BacktraceLock>::print
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/sys/backtrace.rs:47:9
+   9:     0x7f3d82268fef - std[293b22bff60fef0f]::panicking::default_hook::{closure#0}
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/panicking.rs:292:27
+  10:     0x7f3d82279791 - std[293b22bff60fef0f]::panicking::default_hook
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/panicking.rs:319:9
+  11:     0x7f3d8227994b - std[293b22bff60fef0f]::panicking::panic_with_hook
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/panicking.rs:825:13
+  12:     0x7f3d822690da - std[293b22bff60fef0f]::panicking::panic_handler::{closure#0}
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/panicking.rs:691:13
+  13:     0x7f3d8225e6b9 - std[293b22bff60fef0f]::sys::backtrace::__rust_end_short_backtrace::<std[293b22bff60fef0f]::panicking::panic_handler::{closure#0}, !>
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/sys/backtrace.rs:182:18
+  14:     0x7f3d822699dd - __rustc[577421f4e1f758ae]::rust_begin_unwind
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/std/src/panicking.rs:689:5
+  15:     0x7f3d8229124c - core[2b5b3e9ff4faf620]::panicking::panic_fmt
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/core/src/panicking.rs:80:14
+  16:     0x7f3d82292269 - core[2b5b3e9ff4faf620]::panicking::panic_const::panic_const_mul_overflow
+                               at /rustc/f134bbc78dac04a17324341a8d4a15a6930d81a7/library/core/src/panicking.rs:175:17
+  17:     0x7f3d81fc08c4 - <libafl_bolts[3ac902bda9931736]::rands::Lehmer64Rand as libafl_bolts[3ac902bda9931736]::rands::Rand>::next
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl_bolts-0.11.2/src/rands.rs:252:9
+  18:     0x7f3d81fd4bd8 - <libafl_bolts[3ac902bda9931736]::rands::Lehmer64Rand as libafl_bolts[3ac902bda9931736]::rands::Rand>::below
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl_bolts-0.11.2/src/rands.rs:41:33
+  19:     0x7f3d81fd4ad5 - <libafl_bolts[3ac902bda9931736]::rands::Lehmer64Rand as libafl_bolts[3ac902bda9931736]::rands::Rand>::choose::<&alloc[c16a965bb1291293]::vec::Vec<darthshader_mutator[2af9983341285b71]::ast::tree::ASTHandle>, core[2b5b3e9ff4faf620]::slice::iter::Iter<darthshader_mutator[2af9983341285b71]::ast::tree::ASTHandle>, &darthshader_mutator[2af9983341285b71]::ast::tree::ASTHandle>
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl_bolts-0.11.2/src/rands.rs:73:26
+  20:     0x7f3d81fe67b6 - <darthshader_mutator[2af9983341285b71]::ast::mutate::ASTDeepenMutator as libafl[773ac89363febb19]::mutators::Mutator<darthshader_mutator[2af9983341285b71]::layeredinput::LayeredInput, darthshader_mutator[2af9983341285b71]::mini_state::MiniState>>::mutate
+                               at /home/oof/darthshader_library/darthshader/src/ast/mutate.rs:483:23
+  21:     0x7f3d81fe452f - <(darthshader_mutator[2af9983341285b71]::ast::mutate::ASTDeepenMutator, ()) as libafl[773ac89363febb19]::mutators::MutatorsTuple<darthshader_mutator[2af9983341285b71]::layeredinput::LayeredInput, darthshader_mutator[2af9983341285b71]::mini_state::MiniState>>::mutate_all
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl-0.11.2/src/mutators/mod.rs:231:24
+  22:     0x7f3d81fe4d63 - <(darthshader_mutator[2af9983341285b71]::ast::mutate::ASTIdentifierMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTDeepenMutator, ())) as libafl[773ac89363febb19]::mutators::MutatorsTuple<darthshader_mutator[2af9983341285b71]::layeredinput::LayeredInput, darthshader_mutator[2af9983341285b71]::mini_state::MiniState>>::mutate_all
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl-0.11.2/src/mutators/mod.rs:232:19
+  23:     0x7f3d81fe5243 - <(darthshader_mutator[2af9983341285b71]::ast::mutate::ASTSwapChildrenMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTIdentifierMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTDeepenMutator, ()))) as libafl[773ac89363febb19]::mutators::MutatorsTuple<darthshader_mutator[2af9983341285b71]::layeredinput::LayeredInput, darthshader_mutator[2af9983341285b71]::mini_state::MiniState>>::mutate_all
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl-0.11.2/src/mutators/mod.rs:232:19
+  24:     0x7f3d81fe4af3 - <(darthshader_mutator[2af9983341285b71]::ast::mutate::ASTSpliceMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTSwapChildrenMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTIdentifierMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTDeepenMutator, ())))) as libafl[773ac89363febb19]::mutators::MutatorsTuple<darthshader_mutator[2af9983341285b71]::layeredinput::LayeredInput, darthshader_mutator[2af9983341285b71]::mini_state::MiniState>>::mutate_all
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl-0.11.2/src/mutators/mod.rs:232:19
+  25:     0x7f3d81fe4fd7 - <(darthshader_mutator[2af9983341285b71]::ast::mutate::ASTReplaceTokenMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTSpliceMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTSwapChildrenMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTIdentifierMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTDeepenMutator, ()))))) as libafl[773ac89363febb19]::mutators::MutatorsTuple<darthshader_mutator[2af9983341285b71]::layeredinput::LayeredInput, darthshader_mutator[2af9983341285b71]::mini_state::MiniState>>::mutate_all
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl-0.11.2/src/mutators/mod.rs:232:19
+  26:     0x7f3d81fe4883 - <(darthshader_mutator[2af9983341285b71]::ast::mutate::ASTDeleteMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTReplaceTokenMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTSpliceMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTSwapChildrenMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTIdentifierMutator, (darthshader_mutator[2af9983341285b71]::ast::mutate::ASTDeepenMutator, ())))))) as libafl[773ac89363febb19]::mutators::MutatorsTuple<darthshader_mutator[2af9983341285b71]::layeredinput::LayeredInput, darthshader_mutator[2af9983341285b71]::mini_state::MiniState>>::mutate_all
+                               at /home/oof/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libafl-0.11.2/src/mutators/mod.rs:232:19
+  27:     0x7f3d81fcf0e3 - darthshader_mutate
+                               at /home/oof/darthshader_library/darthshader/src/ffi.rs:35:18
+  28:     0x55a94b0233b8 - main
+  29:     0x7f3d822f8d90 - __libc_start_call_main
+                               at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  30:     0x7f3d822f8e40 - __libc_start_main_impl
+                               at ./csu/../csu/libc-start.c:392:3
+  31:     0x55a94b023175 - _start
+  32:                0x0 - <unknown>
+fatal runtime error: failed to initiate panic, error 5, aborting
+Aborted (core dumped)
